@@ -1,0 +1,72 @@
+{
+  "models": [
+    "openai/gpt-5"
+  ],
+  "timestamp": "2025-12-30T03:59:42.255401",
+  "results": [
+    {
+      "model": "openai/gpt-5",
+      "benchmark": "gorilla",
+      "method": "zero-shot",
+      "success_rate": 26.0,
+      "avg_latency_ms": 36600.56862831116,
+      "num_tasks": 50
+    },
+    {
+      "model": "openai/gpt-5",
+      "benchmark": "gorilla",
+      "method": "few-shot",
+      "success_rate": 38.0,
+      "avg_latency_ms": 30771.829719543457,
+      "num_tasks": 50
+    },
+    {
+      "model": "openai/gpt-5",
+      "benchmark": "spider2",
+      "method": "zero-shot",
+      "success_rate": 54.0,
+      "avg_latency_ms": 16759.953813552856,
+      "num_tasks": 50
+    },
+    {
+      "model": "openai/gpt-5",
+      "benchmark": "spider2",
+      "method": "few-shot",
+      "success_rate": 72.0,
+      "avg_latency_ms": 10392.657442092896,
+      "num_tasks": 50
+    },
+    {
+      "model": "openai/gpt-5",
+      "benchmark": "webarena",
+      "method": "zero-shot",
+      "success_rate": 50.0,
+      "avg_latency_ms": 28527.19919204712,
+      "num_tasks": 50
+    },
+    {
+      "model": "openai/gpt-5",
+      "benchmark": "webarena",
+      "method": "few-shot",
+      "success_rate": 54.0,
+      "avg_latency_ms": 11609.570231437683,
+      "num_tasks": 50
+    },
+    {
+      "model": "openai/gpt-5",
+      "benchmark": "intercode",
+      "method": "zero-shot",
+      "success_rate": 72.0,
+      "avg_latency_ms": 16467.206916809082,
+      "num_tasks": 50
+    },
+    {
+      "model": "openai/gpt-5",
+      "benchmark": "intercode",
+      "method": "few-shot",
+      "success_rate": 72.0,
+      "avg_latency_ms": 13187.185244560242,
+      "num_tasks": 50
+    }
+  ]
+}

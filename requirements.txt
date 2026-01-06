@@ -1,0 +1,47 @@
+# Meta-Tool Requirements
+# ======================
+
+# Core ML/DL
+torch>=2.0.0
+transformers>=4.36.0
+accelerate>=0.25.0
+peft>=0.7.0
+
+# Memory-efficient loading (4-bit quantization)
+bitsandbytes>=0.41.0
+
+# Vector Storage and Retrieval
+faiss-cpu>=1.7.4  # Use faiss-gpu for GPU acceleration
+sentence-transformers>=2.2.2
+
+# Constrained Decoding
+outlines>=0.0.34
+
+# Data Processing
+numpy>=1.24.0
+pandas>=2.0.0
+datasets>=2.14.0
+scipy>=1.10.0
+
+# ToolBench Data Download
+gdown>=4.7.0
+
+# Experiment Tracking
+wandb>=0.16.0
+tqdm>=4.65.0
+
+# Utilities
+pyyaml>=6.0
+jsonschema>=4.17.0
+
+# Optional: For evaluation
+# selenium>=4.15.0  # For WebArena
+# sqlparse>=0.4.4   # For Spider 2.0
+
+# OpenAI API (for GPT-4 baselines)
+openai>=1.0.0
+
+# Development
+pytest>=7.4.0
+black>=23.0.0
+isort>=5.12.0

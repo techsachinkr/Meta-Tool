@@ -1,0 +1,22 @@
+{
+  "gorilla": {
+    "success_rate": 32.0,
+    "latency": 1697.472186088562,
+    "adaptation_time": 7.152557373046875e-07
+  },
+  "spider2": {
+    "success_rate": 62.0,
+    "latency": 1044.1372156143188,
+    "adaptation_time": 4.76837158203125e-07
+  },
+  "webarena": {
+    "success_rate": 24.0,
+    "latency": 1608.3238124847412,
+    "adaptation_time": 4.76837158203125e-07
+  },
+  "intercode": {
+    "success_rate": 44.0,
+    "latency": 671.4150142669678,
+    "adaptation_time": 4.76837158203125e-07
+  }
+}

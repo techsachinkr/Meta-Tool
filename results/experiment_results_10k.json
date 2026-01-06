@@ -1,0 +1,51 @@
+{
+  "results": {
+    "gorilla": {
+      "benchmark": "gorilla",
+      "num_tasks": 50,
+      "num_success": 16,
+      "success_rate": 0.32,
+      "avg_latency_ms": 1575.488076210022,
+      "avg_steps": 1.0,
+      "adaptation_time_s": 0.6405203342437744
+    },
+    "spider2": {
+      "benchmark": "spider2",
+      "num_tasks": 50,
+      "num_success": 32,
+      "success_rate": 0.64,
+      "avg_latency_ms": 1439.063949584961,
+      "avg_steps": 1.0,
+      "adaptation_time_s": 0.17647218704223633
+    },
+    "webarena": {
+      "benchmark": "webarena",
+      "num_tasks": 50,
+      "num_success": 17,
+      "success_rate": 0.34,
+      "avg_latency_ms": 2294.9935150146484,
+      "avg_steps": 1.0,
+      "adaptation_time_s": 0.17491769790649414
+    },
+    "intercode": {
+      "benchmark": "intercode",
+      "num_tasks": 50,
+      "num_success": 26,
+      "success_rate": 0.52,
+      "avg_latency_ms": 690.3091955184937,
+      "avg_steps": 1.0,
+      "adaptation_time_s": 0.17820358276367188
+    }
+  },
+  "summary": {
+    "avg_success_rate": 0.455,
+    "avg_latency_ms": 1499.9636840820312,
+    "avg_adaptation_time_s": 0.2925284504890442,
+    "training_time_s": 0
+  },
+  "timestamp": "2026-01-06T03:16:30.082882",
+  "config": {
+    "model": "Meta-Tool",
+    "framework": "Hypernetwork + LoRA + Value-Guided Beam Search"
+  }
+}

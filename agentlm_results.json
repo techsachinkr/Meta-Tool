@@ -1,0 +1,39 @@
+{
+  "model": "zai-org/agentlm-7b",
+  "timestamp": "2025-12-31T19:50:52.936065",
+  "strict_eval": true,
+  "results": [
+    {
+      "model": "zai-org/agentlm-7b",
+      "benchmark": "gorilla",
+      "method": "few-shot",
+      "success_rate": 8.0,
+      "avg_latency_ms": 11015.815329551697,
+      "num_tasks": 50
+    },
+    {
+      "model": "zai-org/agentlm-7b",
+      "benchmark": "spider2",
+      "method": "few-shot",
+      "success_rate": 44.0,
+      "avg_latency_ms": 12691.103773117065,
+      "num_tasks": 50
+    },
+    {
+      "model": "zai-org/agentlm-7b",
+      "benchmark": "webarena",
+      "method": "few-shot",
+      "success_rate": 8.0,
+      "avg_latency_ms": 5062.365970611572,
+      "num_tasks": 50
+    },
+    {
+      "model": "zai-org/agentlm-7b",
+      "benchmark": "intercode",
+      "method": "few-shot",
+      "success_rate": 40.0,
+      "avg_latency_ms": 6756.610531806946,
+      "num_tasks": 50
+    }
+  ]
+}

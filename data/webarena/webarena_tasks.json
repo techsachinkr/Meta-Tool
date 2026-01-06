@@ -1,0 +1,957 @@
+[
+  {
+    "id": "webarena_0",
+    "query": "Add a laptop to the shopping cart",
+    "site": "shopping",
+    "expected_actions": [
+      "search",
+      "click_product",
+      "add_to_cart"
+    ]
+  },
+  {
+    "id": "webarena_1",
+    "query": "Find wireless headphones under $100",
+    "site": "shopping",
+    "expected_actions": [
+      "search",
+      "filter_price",
+      "view_results"
+    ]
+  },
+  {
+    "id": "webarena_2",
+    "query": "Check out with items in cart",
+    "site": "shopping",
+    "expected_actions": [
+      "go_to_cart",
+      "proceed_checkout",
+      "enter_info",
+      "submit"
+    ]
+  },
+  {
+    "id": "webarena_3",
+    "query": "Apply a coupon code SAVE20",
+    "site": "shopping",
+    "expected_actions": [
+      "go_to_cart",
+      "enter_coupon",
+      "apply"
+    ]
+  },
+  {
+    "id": "webarena_4",
+    "query": "Remove an item from the cart",
+    "site": "shopping",
+    "expected_actions": [
+      "go_to_cart",
+      "click_remove",
+      "confirm"
+    ]
+  },
+  {
+    "id": "webarena_5",
+    "query": "Change quantity of item in cart to 3",
+    "site": "shopping",
+    "expected_actions": [
+      "go_to_cart",
+      "update_quantity",
+      "save"
+    ]
+  },
+  {
+    "id": "webarena_6",
+    "query": "Sort products by price low to high",
+    "site": "shopping",
+    "expected_actions": [
+      "click_sort",
+      "select_price_asc"
+    ]
+  },
+  {
+    "id": "webarena_7",
+    "query": "Filter products by brand Apple",
+    "site": "shopping",
+    "expected_actions": [
+      "click_filter",
+      "select_brand",
+      "apply"
+    ]
+  },
+  {
+    "id": "webarena_8",
+    "query": "Create a new post titled 'Hello World'",
+    "site": "forum",
+    "expected_actions": [
+      "click_new_post",
+      "enter_title",
+      "enter_content",
+      "submit"
+    ]
+  },
+  {
+    "id": "webarena_9",
+    "query": "Reply to the top post",
+    "site": "forum",
+    "expected_actions": [
+      "click_post",
+      "click_reply",
+      "enter_text",
+      "submit"
+    ]
+  },
+  {
+    "id": "webarena_10",
+    "query": "Upvote the first comment",
+    "site": "forum",
+    "expected_actions": [
+      "find_comment",
+      "click_upvote"
+    ]
+  },
+  {
+    "id": "webarena_11",
+    "query": "Edit my profile bio",
+    "site": "forum",
+    "expected_actions": [
+      "go_to_profile",
+      "click_edit",
+      "modify_bio",
+      "save"
+    ]
+  },
+  {
+    "id": "webarena_12",
+    "query": "Follow user JohnDoe",
+    "site": "forum",
+    "expected_actions": [
+      "search_user",
+      "click_profile",
+      "click_follow"
+    ]
+  },
+  {
+    "id": "webarena_13",
+    "query": "Send a private message to admin",
+    "site": "forum",
+    "expected_actions": [
+      "go_to_messages",
+      "click_compose",
+      "select_recipient",
+      "type_message",
+      "send"
+    ]
+  },
+  {
+    "id": "webarena_14",
+    "query": "Search for user by email admin@test.com",
+    "site": "admin",
+    "expected_actions": [
+      "go_to_users",
+      "enter_search",
+      "submit"
+    ]
+  },
+  {
+    "id": "webarena_15",
+    "query": "Ban user spammer123",
+    "site": "admin",
+    "expected_actions": [
+      "search_user",
+      "click_user",
+      "click_ban",
+      "confirm"
+    ]
+  },
+  {
+    "id": "webarena_16",
+    "query": "Export user data to CSV",
+    "site": "admin",
+    "expected_actions": [
+      "go_to_users",
+      "click_export",
+      "select_csv",
+      "download"
+    ]
+  },
+  {
+    "id": "webarena_17",
+    "query": "Change site settings to maintenance mode",
+    "site": "admin",
+    "expected_actions": [
+      "go_to_settings",
+      "toggle_maintenance",
+      "save"
+    ]
+  },
+  {
+    "id": "webarena_18",
+    "query": "View error logs from today",
+    "site": "admin",
+    "expected_actions": [
+      "go_to_logs",
+      "filter_date",
+      "filter_errors",
+      "view"
+    ]
+  },
+  {
+    "id": "webarena_19",
+    "query": "Create a new admin user",
+    "site": "admin",
+    "expected_actions": [
+      "go_to_users",
+      "click_create",
+      "fill_form",
+      "set_role_admin",
+      "save"
+    ]
+  },
+  {
+    "id": "webarena_20",
+    "query": "Upload an image to the media library",
+    "site": "cms",
+    "expected_actions": [
+      "go_to_media",
+      "click_upload",
+      "select_file",
+      "confirm"
+    ]
+  },
+  {
+    "id": "webarena_21",
+    "query": "Create a new blog post draft",
+    "site": "cms",
+    "expected_actions": [
+      "go_to_posts",
+      "click_new",
+      "enter_content",
+      "save_draft"
+    ]
+  },
+  {
+    "id": "webarena_22",
+    "query": "Schedule post for tomorrow at 9am",
+    "site": "cms",
+    "expected_actions": [
+      "open_post",
+      "click_schedule",
+      "set_datetime",
+      "confirm"
+    ]
+  },
+  {
+    "id": "webarena_23",
+    "query": "Delete all posts in trash",
+    "site": "cms",
+    "expected_actions": [
+      "go_to_trash",
+      "select_all",
+      "click_delete_permanent",
+      "confirm"
+    ]
+  },
+  {
+    "id": "webarena_24",
+    "query": "Compose email to team@company.com",
+    "site": "email",
+    "expected_actions": [
+      "click_compose",
+      "enter_recipient",
+      "enter_subject",
+      "enter_body",
+      "send"
+    ]
+  },
+  {
+    "id": "webarena_25",
+    "query": "Move email to Archive folder",
+    "site": "email",
+    "expected_actions": [
+      "select_email",
+      "click_move",
+      "select_archive"
+    ]
+  },
+  {
+    "id": "webarena_26",
+    "query": "Create calendar event for Monday 2pm",
+    "site": "calendar",
+    "expected_actions": [
+      "click_create",
+      "set_date",
+      "set_time",
+      "enter_title",
+      "save"
+    ]
+  },
+  {
+    "id": "webarena_27",
+    "query": "Invite john@test.com to meeting",
+    "site": "calendar",
+    "expected_actions": [
+      "open_event",
+      "click_invite",
+      "enter_email",
+      "send"
+    ]
+  },
+  {
+    "id": "webarena_28",
+    "query": "Search for 'python tutorial' and click first result",
+    "site": "search",
+    "expected_actions": [
+      "enter_query",
+      "submit",
+      "click_first_result"
+    ]
+  },
+  {
+    "id": "webarena_29",
+    "query": "Navigate to the About Us page",
+    "site": "general",
+    "expected_actions": [
+      "find_nav",
+      "click_about"
+    ]
+  },
+  {
+    "id": "webarena_30",
+    "query": "Go back to homepage",
+    "site": "general",
+    "expected_actions": [
+      "click_logo"
+    ]
+  },
+  {
+    "id": "webarena_31",
+    "query": "Open help documentation",
+    "site": "general",
+    "expected_actions": [
+      "click_help",
+      "view_docs"
+    ]
+  },
+  {
+    "id": "webarena_32",
+    "query": "Fill out contact form with name and email",
+    "site": "forms",
+    "expected_actions": [
+      "enter_name",
+      "enter_email",
+      "enter_message",
+      "submit"
+    ]
+  },
+  {
+    "id": "webarena_33",
+    "query": "Subscribe to newsletter",
+    "site": "forms",
+    "expected_actions": [
+      "enter_email",
+      "click_subscribe",
+      "confirm"
+    ]
+  },
+  {
+    "id": "webarena_34",
+    "query": "Reset password using email",
+    "site": "auth",
+    "expected_actions": [
+      "click_forgot",
+      "enter_email",
+      "submit"
+    ]
+  },
+  {
+    "id": "webarena_35",
+    "query": "Update account email address",
+    "site": "account",
+    "expected_actions": [
+      "go_to_settings",
+      "edit_email",
+      "enter_new_email",
+      "save",
+      "verify"
+    ]
+  },
+  {
+    "id": "webarena_36",
+    "query": "Track order #12345",
+    "site": "shopping",
+    "expected_actions": [
+      "go_to_orders",
+      "enter_order_id",
+      "view_tracking"
+    ]
+  },
+  {
+    "id": "webarena_37",
+    "query": "Request a refund for recent order",
+    "site": "shopping",
+    "expected_actions": [
+      "go_to_orders",
+      "select_order",
+      "click_refund",
+      "fill_reason",
+      "submit"
+    ]
+  },
+  {
+    "id": "webarena_38",
+    "query": "Add product to wishlist",
+    "site": "shopping",
+    "expected_actions": [
+      "view_product",
+      "click_wishlist"
+    ]
+  },
+  {
+    "id": "webarena_39",
+    "query": "Compare two products",
+    "site": "shopping",
+    "expected_actions": [
+      "select_product1",
+      "click_compare",
+      "select_product2",
+      "view_comparison"
+    ]
+  },
+  {
+    "id": "webarena_40",
+    "query": "Write a product review",
+    "site": "shopping",
+    "expected_actions": [
+      "view_product",
+      "click_reviews",
+      "click_write",
+      "enter_rating",
+      "enter_text",
+      "submit"
+    ]
+  },
+  {
+    "id": "webarena_41",
+    "query": "Add a laptop to the shopping cart",
+    "site": "shopping",
+    "expected_actions": [
+      "search",
+      "click_product",
+      "add_to_cart"
+    ]
+  },
+  {
+    "id": "webarena_42",
+    "query": "Find wireless headphones under $100",
+    "site": "shopping",
+    "expected_actions": [
+      "search",
+      "filter_price",
+      "view_results"
+    ]
+  },
+  {
+    "id": "webarena_43",
+    "query": "Check out with items in cart",
+    "site": "shopping",
+    "expected_actions": [
+      "go_to_cart",
+      "proceed_checkout",
+      "enter_info",
+      "submit"
+    ]
+  },
+  {
+    "id": "webarena_44",
+    "query": "Apply a coupon code SAVE20",
+    "site": "shopping",
+    "expected_actions": [
+      "go_to_cart",
+      "enter_coupon",
+      "apply"
+    ]
+  },
+  {
+    "id": "webarena_45",
+    "query": "Remove an item from the cart",
+    "site": "shopping",
+    "expected_actions": [
+      "go_to_cart",
+      "click_remove",
+      "confirm"
+    ]
+  },
+  {
+    "id": "webarena_46",
+    "query": "Change quantity of item in cart to 3",
+    "site": "shopping",
+    "expected_actions": [
+      "go_to_cart",
+      "update_quantity",
+      "save"
+    ]
+  },
+  {
+    "id": "webarena_47",
+    "query": "Sort products by price low to high",
+    "site": "shopping",
+    "expected_actions": [
+      "click_sort",
+      "select_price_asc"
+    ]
+  },
+  {
+    "id": "webarena_48",
+    "query": "Filter products by brand Apple",
+    "site": "shopping",
+    "expected_actions": [
+      "click_filter",
+      "select_brand",
+      "apply"
+    ]
+  },
+  {
+    "id": "webarena_49",
+    "query": "Create a new post titled 'Hello World'",
+    "site": "forum",
+    "expected_actions": [
+      "click_new_post",
+      "enter_title",
+      "enter_content",
+      "submit"
+    ]
+  },
+  {
+    "id": "webarena_50",
+    "query": "Reply to the top post",
+    "site": "forum",
+    "expected_actions": [
+      "click_post",
+      "click_reply",
+      "enter_text",
+      "submit"
+    ]
+  },
+  {
+    "id": "webarena_51",
+    "query": "Upvote the first comment",
+    "site": "forum",
+    "expected_actions": [
+      "find_comment",
+      "click_upvote"
+    ]
+  },
+  {
+    "id": "webarena_52",
+    "query": "Edit my profile bio",
+    "site": "forum",
+    "expected_actions": [
+      "go_to_profile",
+      "click_edit",
+      "modify_bio",
+      "save"
+    ]
+  },
+  {
+    "id": "webarena_53",
+    "query": "Follow user JohnDoe",
+    "site": "forum",
+    "expected_actions": [
+      "search_user",
+      "click_profile",
+      "click_follow"
+    ]
+  },
+  {
+    "id": "webarena_54",
+    "query": "Send a private message to admin",
+    "site": "forum",
+    "expected_actions": [
+      "go_to_messages",
+      "click_compose",
+      "select_recipient",
+      "type_message",
+      "send"
+    ]
+  },
+  {
+    "id": "webarena_55",
+    "query": "Search for user by email admin@test.com",
+    "site": "admin",
+    "expected_actions": [
+      "go_to_users",
+      "enter_search",
+      "submit"
+    ]
+  },
+  {
+    "id": "webarena_56",
+    "query": "Ban user spammer123",
+    "site": "admin",
+    "expected_actions": [
+      "search_user",
+      "click_user",
+      "click_ban",
+      "confirm"
+    ]
+  },
+  {
+    "id": "webarena_57",
+    "query": "Export user data to CSV",
+    "site": "admin",
+    "expected_actions": [
+      "go_to_users",
+      "click_export",
+      "select_csv",
+      "download"
+    ]
+  },
+  {
+    "id": "webarena_58",
+    "query": "Change site settings to maintenance mode",
+    "site": "admin",
+    "expected_actions": [
+      "go_to_settings",
+      "toggle_maintenance",
+      "save"
+    ]
+  },
+  {
+    "id": "webarena_59",
+    "query": "View error logs from today",
+    "site": "admin",
+    "expected_actions": [
+      "go_to_logs",
+      "filter_date",
+      "filter_errors",
+      "view"
+    ]
+  },
+  {
+    "id": "webarena_60",
+    "query": "Create a new admin user",
+    "site": "admin",
+    "expected_actions": [
+      "go_to_users",
+      "click_create",
+      "fill_form",
+      "set_role_admin",
+      "save"
+    ]
+  },
+  {
+    "id": "webarena_61",
+    "query": "Upload an image to the media library",
+    "site": "cms",
+    "expected_actions": [
+      "go_to_media",
+      "click_upload",
+      "select_file",
+      "confirm"
+    ]
+  },
+  {
+    "id": "webarena_62",
+    "query": "Create a new blog post draft",
+    "site": "cms",
+    "expected_actions": [
+      "go_to_posts",
+      "click_new",
+      "enter_content",
+      "save_draft"
+    ]
+  },
+  {
+    "id": "webarena_63",
+    "query": "Schedule post for tomorrow at 9am",
+    "site": "cms",
+    "expected_actions": [
+      "open_post",
+      "click_schedule",
+      "set_datetime",
+      "confirm"
+    ]
+  },
+  {
+    "id": "webarena_64",
+    "query": "Delete all posts in trash",
+    "site": "cms",
+    "expected_actions": [
+      "go_to_trash",
+      "select_all",
+      "click_delete_permanent",
+      "confirm"
+    ]
+  },
+  {
+    "id": "webarena_65",
+    "query": "Compose email to team@company.com",
+    "site": "email",
+    "expected_actions": [
+      "click_compose",
+      "enter_recipient",
+      "enter_subject",
+      "enter_body",
+      "send"
+    ]
+  },
+  {
+    "id": "webarena_66",
+    "query": "Move email to Archive folder",
+    "site": "email",
+    "expected_actions": [
+      "select_email",
+      "click_move",
+      "select_archive"
+    ]
+  },
+  {
+    "id": "webarena_67",
+    "query": "Create calendar event for Monday 2pm",
+    "site": "calendar",
+    "expected_actions": [
+      "click_create",
+      "set_date",
+      "set_time",
+      "enter_title",
+      "save"
+    ]
+  },
+  {
+    "id": "webarena_68",
+    "query": "Invite john@test.com to meeting",
+    "site": "calendar",
+    "expected_actions": [
+      "open_event",
+      "click_invite",
+      "enter_email",
+      "send"
+    ]
+  },
+  {
+    "id": "webarena_69",
+    "query": "Search for 'python tutorial' and click first result",
+    "site": "search",
+    "expected_actions": [
+      "enter_query",
+      "submit",
+      "click_first_result"
+    ]
+  },
+  {
+    "id": "webarena_70",
+    "query": "Navigate to the About Us page",
+    "site": "general",
+    "expected_actions": [
+      "find_nav",
+      "click_about"
+    ]
+  },
+  {
+    "id": "webarena_71",
+    "query": "Go back to homepage",
+    "site": "general",
+    "expected_actions": [
+      "click_logo"
+    ]
+  },
+  {
+    "id": "webarena_72",
+    "query": "Open help documentation",
+    "site": "general",
+    "expected_actions": [
+      "click_help",
+      "view_docs"
+    ]
+  },
+  {
+    "id": "webarena_73",
+    "query": "Fill out contact form with name and email",
+    "site": "forms",
+    "expected_actions": [
+      "enter_name",
+      "enter_email",
+      "enter_message",
+      "submit"
+    ]
+  },
+  {
+    "id": "webarena_74",
+    "query": "Subscribe to newsletter",
+    "site": "forms",
+    "expected_actions": [
+      "enter_email",
+      "click_subscribe",
+      "confirm"
+    ]
+  },
+  {
+    "id": "webarena_75",
+    "query": "Reset password using email",
+    "site": "auth",
+    "expected_actions": [
+      "click_forgot",
+      "enter_email",
+      "submit"
+    ]
+  },
+  {
+    "id": "webarena_76",
+    "query": "Update account email address",
+    "site": "account",
+    "expected_actions": [
+      "go_to_settings",
+      "edit_email",
+      "enter_new_email",
+      "save",
+      "verify"
+    ]
+  },
+  {
+    "id": "webarena_77",
+    "query": "Track order #12345",
+    "site": "shopping",
+    "expected_actions": [
+      "go_to_orders",
+      "enter_order_id",
+      "view_tracking"
+    ]
+  },
+  {
+    "id": "webarena_78",
+    "query": "Request a refund for recent order",
+    "site": "shopping",
+    "expected_actions": [
+      "go_to_orders",
+      "select_order",
+      "click_refund",
+      "fill_reason",
+      "submit"
+    ]
+  },
+  {
+    "id": "webarena_79",
+    "query": "Add product to wishlist",
+    "site": "shopping",
+    "expected_actions": [
+      "view_product",
+      "click_wishlist"
+    ]
+  },
+  {
+    "id": "webarena_80",
+    "query": "Compare two products",
+    "site": "shopping",
+    "expected_actions": [
+      "select_product1",
+      "click_compare",
+      "select_product2",
+      "view_comparison"
+    ]
+  },
+  {
+    "id": "webarena_81",
+    "query": "Write a product review",
+    "site": "shopping",
+    "expected_actions": [
+      "view_product",
+      "click_reviews",
+      "click_write",
+      "enter_rating",
+      "enter_text",
+      "submit"
+    ]
+  },
+  {
+    "id": "webarena_82",
+    "query": "Add a laptop to the shopping cart",
+    "site": "shopping",
+    "expected_actions": [
+      "search",
+      "click_product",
+      "add_to_cart"
+    ]
+  },
+  {
+    "id": "webarena_83",
+    "query": "Find wireless headphones under $100",
+    "site": "shopping",
+    "expected_actions": [
+      "search",
+      "filter_price",
+      "view_results"
+    ]
+  },
+  {
+    "id": "webarena_84",
+    "query": "Check out with items in cart",
+    "site": "shopping",
+    "expected_actions": [
+      "go_to_cart",
+      "proceed_checkout",
+      "enter_info",
+      "submit"
+    ]
+  },
+  {
+    "id": "webarena_85",
+    "query": "Apply a coupon code SAVE20",
+    "site": "shopping",
+    "expected_actions": [
+      "go_to_cart",
+      "enter_coupon",
+      "apply"
+    ]
+  },
+  {
+    "id": "webarena_86",
+    "query": "Remove an item from the cart",
+    "site": "shopping",
+    "expected_actions": [
+      "go_to_cart",
+      "click_remove",
+      "confirm"
+    ]
+  },
+  {
+    "id": "webarena_87",
+    "query": "Change quantity of item in cart to 3",
+    "site": "shopping",
+    "expected_actions": [
+      "go_to_cart",
+      "update_quantity",
+      "save"
+    ]
+  },
+  {
+    "id": "webarena_88",
+    "query": "Sort products by price low to high",
+    "site": "shopping",
+    "expected_actions": [
+      "click_sort",
+      "select_price_asc"
+    ]
+  },
+  {
+    "id": "webarena_89",
+    "query": "Filter products by brand Apple",
+    "site": "shopping",
+    "expected_actions": [
+      "click_filter",
+      "select_brand",
+      "apply"
+    ]
+  },
+  {
+    "id": "webarena_90",
+    "query": "Create a new post titled 'Hello World'",
+    "site": "forum",
+    "expected_actions": [
+      "click_new_post",
+      "enter_title",
+      "enter_content",
+      "submit"
+    ]
+  }
+]

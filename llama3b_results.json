@@ -1,0 +1,39 @@
+{
+  "model": "meta-llama/Llama-3.2-3B-Instruct",
+  "timestamp": "2026-01-01T01:12:24.104904",
+  "strict_eval": true,
+  "results": [
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "benchmark": "gorilla",
+      "method": "few-shot",
+      "success_rate": 4.0,
+      "avg_latency_ms": 3474.3785858154297,
+      "num_tasks": 50
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "benchmark": "spider2",
+      "method": "few-shot",
+      "success_rate": 57.99999999999999,
+      "avg_latency_ms": 996.3540363311768,
+      "num_tasks": 50
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "benchmark": "webarena",
+      "method": "few-shot",
+      "success_rate": 28.000000000000004,
+      "avg_latency_ms": 1976.7343425750732,
+      "num_tasks": 50
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "benchmark": "intercode",
+      "method": "few-shot",
+      "success_rate": 48.0,
+      "avg_latency_ms": 544.7385120391846,
+      "num_tasks": 50
+    }
+  ]
+}

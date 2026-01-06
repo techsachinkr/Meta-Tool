@@ -1,0 +1,457 @@
+[
+  {
+    "id": "intercode_0",
+    "query": "Find all Python files in current directory",
+    "expected_command": "find . -name '*.py'"
+  },
+  {
+    "id": "intercode_1",
+    "query": "Find all .py files modified in last 24 hours",
+    "expected_command": "find . -name '*.py' -mtime -1"
+  },
+  {
+    "id": "intercode_2",
+    "query": "Find files larger than 100MB",
+    "expected_command": "find . -size +100M"
+  },
+  {
+    "id": "intercode_3",
+    "query": "Find and delete all .tmp files",
+    "expected_command": "find . -name '*.tmp' -delete"
+  },
+  {
+    "id": "intercode_4",
+    "query": "Find all empty directories",
+    "expected_command": "find . -type d -empty"
+  },
+  {
+    "id": "intercode_5",
+    "query": "List all files recursively with size",
+    "expected_command": "find . -type f -exec ls -lh {} \\;"
+  },
+  {
+    "id": "intercode_6",
+    "query": "Count total number of files in directory",
+    "expected_command": "find . -type f | wc -l"
+  },
+  {
+    "id": "intercode_7",
+    "query": "Find duplicate files by name",
+    "expected_command": "find . -type f -printf '%f\\n' | sort | uniq -d"
+  },
+  {
+    "id": "intercode_8",
+    "query": "Count lines in a file",
+    "expected_command": "wc -l filename"
+  },
+  {
+    "id": "intercode_9",
+    "query": "Count words in a file",
+    "expected_command": "wc -w filename"
+  },
+  {
+    "id": "intercode_10",
+    "query": "Count characters in a file",
+    "expected_command": "wc -c filename"
+  },
+  {
+    "id": "intercode_11",
+    "query": "Show first 10 lines of file",
+    "expected_command": "head -n 10 filename"
+  },
+  {
+    "id": "intercode_12",
+    "query": "Show last 20 lines of file",
+    "expected_command": "tail -n 20 filename"
+  },
+  {
+    "id": "intercode_13",
+    "query": "Show lines 50-100 of a file",
+    "expected_command": "sed -n '50,100p' filename"
+  },
+  {
+    "id": "intercode_14",
+    "query": "Remove blank lines from file",
+    "expected_command": "sed '/^$/d' filename"
+  },
+  {
+    "id": "intercode_15",
+    "query": "Replace tabs with spaces",
+    "expected_command": "sed 's/\\t/    /g' filename"
+  },
+  {
+    "id": "intercode_16",
+    "query": "Search for pattern in files",
+    "expected_command": "grep -r 'pattern' ."
+  },
+  {
+    "id": "intercode_17",
+    "query": "Search for word in files ignoring case",
+    "expected_command": "grep -ri 'word' ."
+  },
+  {
+    "id": "intercode_18",
+    "query": "Find files containing 'error'",
+    "expected_command": "grep -l 'error' *"
+  },
+  {
+    "id": "intercode_19",
+    "query": "Count occurrences of pattern in file",
+    "expected_command": "grep -c 'pattern' filename"
+  },
+  {
+    "id": "intercode_20",
+    "query": "Show lines NOT matching pattern",
+    "expected_command": "grep -v 'pattern' filename"
+  },
+  {
+    "id": "intercode_21",
+    "query": "Search with line numbers",
+    "expected_command": "grep -n 'pattern' filename"
+  },
+  {
+    "id": "intercode_22",
+    "query": "Search for whole word only",
+    "expected_command": "grep -w 'word' filename"
+  },
+  {
+    "id": "intercode_23",
+    "query": "Search in gzipped files",
+    "expected_command": "zgrep 'pattern' file.gz"
+  },
+  {
+    "id": "intercode_24",
+    "query": "Show disk usage of current directory",
+    "expected_command": "du -sh ."
+  },
+  {
+    "id": "intercode_25",
+    "query": "Show disk usage of all subdirectories",
+    "expected_command": "du -h --max-depth=1"
+  },
+  {
+    "id": "intercode_26",
+    "query": "Show free disk space",
+    "expected_command": "df -h"
+  },
+  {
+    "id": "intercode_27",
+    "query": "Show memory usage",
+    "expected_command": "free -h"
+  },
+  {
+    "id": "intercode_28",
+    "query": "Show running processes",
+    "expected_command": "ps aux"
+  },
+  {
+    "id": "intercode_29",
+    "query": "Show top 10 memory consuming processes",
+    "expected_command": "ps aux --sort=-%mem | head -10"
+  },
+  {
+    "id": "intercode_30",
+    "query": "Show CPU usage",
+    "expected_command": "top -bn1 | head -20"
+  },
+  {
+    "id": "intercode_31",
+    "query": "Show system uptime",
+    "expected_command": "uptime"
+  },
+  {
+    "id": "intercode_32",
+    "query": "Show current user",
+    "expected_command": "whoami"
+  },
+  {
+    "id": "intercode_33",
+    "query": "Show all logged in users",
+    "expected_command": "who"
+  },
+  {
+    "id": "intercode_34",
+    "query": "List files sorted by size",
+    "expected_command": "ls -lS"
+  },
+  {
+    "id": "intercode_35",
+    "query": "List files sorted by modification time",
+    "expected_command": "ls -lt"
+  },
+  {
+    "id": "intercode_36",
+    "query": "List all files including hidden",
+    "expected_command": "ls -la"
+  },
+  {
+    "id": "intercode_37",
+    "query": "List only directories",
+    "expected_command": "ls -d */"
+  },
+  {
+    "id": "intercode_38",
+    "query": "List files with human readable sizes",
+    "expected_command": "ls -lh"
+  },
+  {
+    "id": "intercode_39",
+    "query": "List files one per line",
+    "expected_command": "ls -1"
+  },
+  {
+    "id": "intercode_40",
+    "query": "List files with inode numbers",
+    "expected_command": "ls -i"
+  },
+  {
+    "id": "intercode_41",
+    "query": "Create tar archive of directory",
+    "expected_command": "tar -cvf archive.tar directory/"
+  },
+  {
+    "id": "intercode_42",
+    "query": "Create compressed tar.gz archive",
+    "expected_command": "tar -czvf archive.tar.gz directory/"
+  },
+  {
+    "id": "intercode_43",
+    "query": "Extract tar archive",
+    "expected_command": "tar -xvf archive.tar"
+  },
+  {
+    "id": "intercode_44",
+    "query": "Extract tar.gz archive",
+    "expected_command": "tar -xzvf archive.tar.gz"
+  },
+  {
+    "id": "intercode_45",
+    "query": "List contents of tar archive",
+    "expected_command": "tar -tvf archive.tar"
+  },
+  {
+    "id": "intercode_46",
+    "query": "Create zip archive",
+    "expected_command": "zip -r archive.zip directory/"
+  },
+  {
+    "id": "intercode_47",
+    "query": "Extract zip archive",
+    "expected_command": "unzip archive.zip"
+  },
+  {
+    "id": "intercode_48",
+    "query": "Check if host is reachable",
+    "expected_command": "ping -c 4 hostname"
+  },
+  {
+    "id": "intercode_49",
+    "query": "Download file from URL",
+    "expected_command": "wget URL"
+  },
+  {
+    "id": "intercode_50",
+    "query": "Download file with curl",
+    "expected_command": "curl -O URL"
+  },
+  {
+    "id": "intercode_51",
+    "query": "Show network interfaces",
+    "expected_command": "ifconfig"
+  },
+  {
+    "id": "intercode_52",
+    "query": "Show open ports",
+    "expected_command": "netstat -tuln"
+  },
+  {
+    "id": "intercode_53",
+    "query": "Check DNS for domain",
+    "expected_command": "nslookup domain.com"
+  },
+  {
+    "id": "intercode_54",
+    "query": "Trace route to host",
+    "expected_command": "traceroute hostname"
+  },
+  {
+    "id": "intercode_55",
+    "query": "Make file executable",
+    "expected_command": "chmod +x filename"
+  },
+  {
+    "id": "intercode_56",
+    "query": "Change file permissions to 755",
+    "expected_command": "chmod 755 filename"
+  },
+  {
+    "id": "intercode_57",
+    "query": "Change owner of file",
+    "expected_command": "chown user:group filename"
+  },
+  {
+    "id": "intercode_58",
+    "query": "Change permissions recursively",
+    "expected_command": "chmod -R 755 directory/"
+  },
+  {
+    "id": "intercode_59",
+    "query": "Kill process by PID",
+    "expected_command": "kill PID"
+  },
+  {
+    "id": "intercode_60",
+    "query": "Kill process by name",
+    "expected_command": "pkill processname"
+  },
+  {
+    "id": "intercode_61",
+    "query": "Run command in background",
+    "expected_command": "command &"
+  },
+  {
+    "id": "intercode_62",
+    "query": "List background jobs",
+    "expected_command": "jobs"
+  },
+  {
+    "id": "intercode_63",
+    "query": "Bring job to foreground",
+    "expected_command": "fg %1"
+  },
+  {
+    "id": "intercode_64",
+    "query": "Sort file contents",
+    "expected_command": "sort filename"
+  },
+  {
+    "id": "intercode_65",
+    "query": "Sort file numerically",
+    "expected_command": "sort -n filename"
+  },
+  {
+    "id": "intercode_66",
+    "query": "Sort and remove duplicates",
+    "expected_command": "sort -u filename"
+  },
+  {
+    "id": "intercode_67",
+    "query": "Reverse file contents",
+    "expected_command": "tac filename"
+  },
+  {
+    "id": "intercode_68",
+    "query": "Get unique lines",
+    "expected_command": "uniq filename"
+  },
+  {
+    "id": "intercode_69",
+    "query": "Count unique lines",
+    "expected_command": "sort filename | uniq -c"
+  },
+  {
+    "id": "intercode_70",
+    "query": "Cut first column",
+    "expected_command": "cut -d',' -f1 filename"
+  },
+  {
+    "id": "intercode_71",
+    "query": "Merge two files side by side",
+    "expected_command": "paste file1 file2"
+  },
+  {
+    "id": "intercode_72",
+    "query": "Show all environment variables",
+    "expected_command": "env"
+  },
+  {
+    "id": "intercode_73",
+    "query": "Show PATH variable",
+    "expected_command": "echo $PATH"
+  },
+  {
+    "id": "intercode_74",
+    "query": "Set environment variable",
+    "expected_command": "export VAR=value"
+  },
+  {
+    "id": "intercode_75",
+    "query": "Show command history",
+    "expected_command": "history"
+  },
+  {
+    "id": "intercode_76",
+    "query": "Clear terminal",
+    "expected_command": "clear"
+  },
+  {
+    "id": "intercode_77",
+    "query": "Show current date and time",
+    "expected_command": "date"
+  },
+  {
+    "id": "intercode_78",
+    "query": "Show calendar",
+    "expected_command": "cal"
+  },
+  {
+    "id": "intercode_79",
+    "query": "Show date in specific format",
+    "expected_command": "date '+%Y-%m-%d'"
+  },
+  {
+    "id": "intercode_80",
+    "query": "Create directory",
+    "expected_command": "mkdir dirname"
+  },
+  {
+    "id": "intercode_81",
+    "query": "Create nested directories",
+    "expected_command": "mkdir -p a/b/c"
+  },
+  {
+    "id": "intercode_82",
+    "query": "Copy file",
+    "expected_command": "cp source dest"
+  },
+  {
+    "id": "intercode_83",
+    "query": "Copy directory recursively",
+    "expected_command": "cp -r source/ dest/"
+  },
+  {
+    "id": "intercode_84",
+    "query": "Move or rename file",
+    "expected_command": "mv oldname newname"
+  },
+  {
+    "id": "intercode_85",
+    "query": "Remove file",
+    "expected_command": "rm filename"
+  },
+  {
+    "id": "intercode_86",
+    "query": "Remove directory",
+    "expected_command": "rm -r dirname"
+  },
+  {
+    "id": "intercode_87",
+    "query": "Create symbolic link",
+    "expected_command": "ln -s target linkname"
+  },
+  {
+    "id": "intercode_88",
+    "query": "Show file type",
+    "expected_command": "file filename"
+  },
+  {
+    "id": "intercode_89",
+    "query": "Compare two files",
+    "expected_command": "diff file1 file2"
+  },
+  {
+    "id": "intercode_90",
+    "query": "Show differences side by side",
+    "expected_command": "diff -y file1 file2"
+  }
+]

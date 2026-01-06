@@ -1,0 +1,502 @@
+[
+  {
+    "name": "SQUAKE",
+    "category": "Logistics",
+    "num_examples": 92
+  },
+  {
+    "name": "Transportistas de Argentina",
+    "category": "Logistics",
+    "num_examples": 400
+  },
+  {
+    "name": "Transitaires",
+    "category": "Logistics",
+    "num_examples": 48
+  },
+  {
+    "name": "TrackingMore_v2",
+    "category": "Logistics",
+    "num_examples": 292
+  },
+  {
+    "name": "suivi-colis",
+    "category": "Logistics",
+    "num_examples": 192
+  },
+  {
+    "name": "Unofficial Trust Pilot",
+    "category": "Data",
+    "num_examples": 420
+  },
+  {
+    "name": "whatsapp data",
+    "category": "Data",
+    "num_examples": 205
+  },
+  {
+    "name": "seo api",
+    "category": "Data",
+    "num_examples": 570
+  },
+  {
+    "name": "Currents News",
+    "category": "Data",
+    "num_examples": 150
+  },
+  {
+    "name": "Web Search",
+    "category": "Data",
+    "num_examples": 390
+  },
+  {
+    "name": "fake users",
+    "category": "Data",
+    "num_examples": 106
+  },
+  {
+    "name": "Fish species",
+    "category": "Data",
+    "num_examples": 183
+  },
+  {
+    "name": "Subtitles for YouTube_v2",
+    "category": "Data",
+    "num_examples": 300
+  },
+  {
+    "name": "Real Estate Records",
+    "category": "Data",
+    "num_examples": 272
+  },
+  {
+    "name": "RaastaAPI",
+    "category": "Data",
+    "num_examples": 120
+  },
+  {
+    "name": "oauthecho",
+    "category": "Data",
+    "num_examples": 154
+  },
+  {
+    "name": "Google Search Results Scraper",
+    "category": "Data",
+    "num_examples": 114
+  },
+  {
+    "name": "OutSystems Community API",
+    "category": "Data",
+    "num_examples": 69
+  },
+  {
+    "name": "VALUE SERP",
+    "category": "Data",
+    "num_examples": 670
+  },
+  {
+    "name": "Address Monitor",
+    "category": "Data",
+    "num_examples": 240
+  },
+  {
+    "name": "Power BI Smartable",
+    "category": "Data",
+    "num_examples": 330
+  },
+  {
+    "name": "Blackbox",
+    "category": "Data",
+    "num_examples": 123
+  },
+  {
+    "name": "Zillow_v2",
+    "category": "Data",
+    "num_examples": 530
+  },
+  {
+    "name": "Socialgrep",
+    "category": "Data",
+    "num_examples": 156
+  },
+  {
+    "name": "Spotify Data",
+    "category": "Data",
+    "num_examples": 260
+  },
+  {
+    "name": "Realtor API for Real Estate Data",
+    "category": "Data",
+    "num_examples": 150
+  },
+  {
+    "name": "Fluximmo",
+    "category": "Data",
+    "num_examples": 126
+  },
+  {
+    "name": "100% Success Instagram API - Scalable & Robust",
+    "category": "Data",
+    "num_examples": 780
+  },
+  {
+    "name": "News Content Extraction - Live",
+    "category": "Data",
+    "num_examples": 294
+  },
+  {
+    "name": "Holy Bible",
+    "category": "Data",
+    "num_examples": 168
+  },
+  {
+    "name": "IYS Skill API",
+    "category": "Data",
+    "num_examples": 244
+  },
+  {
+    "name": "Lotto Draw Results - Global",
+    "category": "Data",
+    "num_examples": 117
+  },
+  {
+    "name": "WhatsApp_Api",
+    "category": "Data",
+    "num_examples": 186
+  },
+  {
+    "name": "Amazon Web Scraping API",
+    "category": "Data",
+    "num_examples": 294
+  },
+  {
+    "name": "GTrend",
+    "category": "Data",
+    "num_examples": 651
+  },
+  {
+    "name": "Bible Search",
+    "category": "Data",
+    "num_examples": 450
+  },
+  {
+    "name": "Risk Management Framework",
+    "category": "Data",
+    "num_examples": 250
+  },
+  {
+    "name": "Get Docs",
+    "category": "Data",
+    "num_examples": 96
+  },
+  {
+    "name": "Axesso - Instagram Data Service",
+    "category": "Data",
+    "num_examples": 352
+  },
+  {
+    "name": "Azure Smartable",
+    "category": "Data",
+    "num_examples": 480
+  },
+  {
+    "name": "CNPJ Validator",
+    "category": "Data",
+    "num_examples": 142
+  },
+  {
+    "name": "VinHub",
+    "category": "Data",
+    "num_examples": 240
+  },
+  {
+    "name": "Dog breeds",
+    "category": "Data",
+    "num_examples": 111
+  },
+  {
+    "name": "Motivational Content",
+    "category": "Data",
+    "num_examples": 236
+  },
+  {
+    "name": "Trulia Real Estate Scraper",
+    "category": "Data",
+    "num_examples": 282
+  },
+  {
+    "name": "Captcha_v2",
+    "category": "Data",
+    "num_examples": 230
+  },
+  {
+    "name": "Token Forwarding",
+    "category": "Data",
+    "num_examples": 210
+  },
+  {
+    "name": "Neostrada Domains",
+    "category": "Data",
+    "num_examples": 48
+  },
+  {
+    "name": "Liquidation Report",
+    "category": "Data",
+    "num_examples": 114
+  },
+  {
+    "name": "Matrimony Profiles",
+    "category": "Data",
+    "num_examples": 176
+  },
+  {
+    "name": "Referential DB",
+    "category": "Data",
+    "num_examples": 210
+  },
+  {
+    "name": "Udemy course scrapper api",
+    "category": "Data",
+    "num_examples": 204
+  },
+  {
+    "name": "Simple YouTube Search",
+    "category": "Data",
+    "num_examples": 237
+  },
+  {
+    "name": "Subtitles for YouTube_v3",
+    "category": "Data",
+    "num_examples": 159
+  },
+  {
+    "name": "Real-Time News Data",
+    "category": "Data",
+    "num_examples": 408
+  },
+  {
+    "name": "G Search",
+    "category": "Data",
+    "num_examples": 152
+  },
+  {
+    "name": "Trinidad Covid 19 Statistics",
+    "category": "Data",
+    "num_examples": 128
+  },
+  {
+    "name": "Age Calculator",
+    "category": "Data",
+    "num_examples": 112
+  },
+  {
+    "name": "Thai Lottery Result",
+    "category": "Data",
+    "num_examples": 141
+  },
+  {
+    "name": "App Store",
+    "category": "Data",
+    "num_examples": 780
+  },
+  {
+    "name": "US Counties",
+    "category": "Data",
+    "num_examples": 240
+  },
+  {
+    "name": "Store Apps",
+    "category": "Data",
+    "num_examples": 432
+  },
+  {
+    "name": "Complete Study Bible",
+    "category": "Data",
+    "num_examples": 330
+  },
+  {
+    "name": "TikTok API",
+    "category": "Data",
+    "num_examples": 438
+  },
+  {
+    "name": "VRM STR Tools",
+    "category": "Data",
+    "num_examples": 195
+  },
+  {
+    "name": "scout",
+    "category": "Data",
+    "num_examples": 104
+  },
+  {
+    "name": "Youtube v3_v2",
+    "category": "Data",
+    "num_examples": 690
+  },
+  {
+    "name": "France 2D",
+    "category": "Data",
+    "num_examples": 180
+  },
+  {
+    "name": "Provinces of Thailand",
+    "category": "Data",
+    "num_examples": 102
+  },
+  {
+    "name": "Twitter",
+    "category": "Social",
+    "num_examples": 510
+  },
+  {
+    "name": "World Population",
+    "category": "Data",
+    "num_examples": 20
+  },
+  {
+    "name": "US States",
+    "category": "Data",
+    "num_examples": 760
+  },
+  {
+    "name": "ASIN Data",
+    "category": "Data",
+    "num_examples": 200
+  },
+  {
+    "name": "TheClique",
+    "category": "Data",
+    "num_examples": 350
+  },
+  {
+    "name": "Random Word Generator",
+    "category": "Data",
+    "num_examples": 134
+  },
+  {
+    "name": "Kick.com API | Kick API",
+    "category": "Data",
+    "num_examples": 570
+  },
+  {
+    "name": "NREL National Renewable Energy Laboratory",
+    "category": "Data",
+    "num_examples": 184
+  },
+  {
+    "name": "Genderize  - Nationalize",
+    "category": "Data",
+    "num_examples": 160
+  },
+  {
+    "name": "Thai Lotto New API",
+    "category": "Data",
+    "num_examples": 120
+  },
+  {
+    "name": "Unicode Codepoints",
+    "category": "Data",
+    "num_examples": 270
+  },
+  {
+    "name": "Whois Lookup_v3",
+    "category": "Data",
+    "num_examples": 240
+  },
+  {
+    "name": "TransitFeeds",
+    "category": "Data",
+    "num_examples": 140
+  },
+  {
+    "name": "SimilarWeb (historical data)",
+    "category": "Data",
+    "num_examples": 158
+  },
+  {
+    "name": "SSH Honeypot",
+    "category": "Data",
+    "num_examples": 240
+  },
+  {
+    "name": "Fear and Greed index",
+    "category": "Data",
+    "num_examples": 100
+  },
+  {
+    "name": "Tesla VIN Identifier",
+    "category": "Data",
+    "num_examples": 360
+  },
+  {
+    "name": "autocomplete usa",
+    "category": "Data",
+    "num_examples": 188
+  },
+  {
+    "name": "Reqres",
+    "category": "Data",
+    "num_examples": 132
+  },
+  {
+    "name": "Todo Lsit",
+    "category": "Data",
+    "num_examples": 86
+  },
+  {
+    "name": "ScrapeMaster",
+    "category": "Data",
+    "num_examples": 120
+  },
+  {
+    "name": "Currency Exchange",
+    "category": "Data",
+    "num_examples": 134
+  },
+  {
+    "name": "Random Chunk API",
+    "category": "Data",
+    "num_examples": 400
+  },
+  {
+    "name": "JailBase",
+    "category": "Data",
+    "num_examples": 171
+  },
+  {
+    "name": "World Bank | GDP",
+    "category": "Data",
+    "num_examples": 136
+  },
+  {
+    "name": "frrefe",
+    "category": "Data",
+    "num_examples": 180
+  },
+  {
+    "name": "10000+ Anime Quotes With Pagination Support",
+    "category": "Data",
+    "num_examples": 287
+  },
+  {
+    "name": "Netflix Data",
+    "category": "Data",
+    "num_examples": 222
+  },
+  {
+    "name": "Twitter Pack_v2",
+    "category": "Data",
+    "num_examples": 640
+  },
+  {
+    "name": "Adzuna",
+    "category": "Data",
+    "num_examples": 660
+  },
+  {
+    "name": "StopModReposts Blocklist",
+    "category": "Data",
+    "num_examples": 354
+  }
+]
