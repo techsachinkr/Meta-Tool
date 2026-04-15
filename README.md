@@ -75,6 +75,28 @@ python run_local_baselines.py --model meta-llama/Llama-3.2-3B-Instruct --strict-
 python run_experiments.py --model-size large --episodes 10000
 ```
 
+### Few-Shot Sensitivity & Error Analysis
+
+Run a combined sweep that measures performance at 0–5 examples and auto-categorizes failures (format, semantic, hallucinated):
+
+```bash
+# Full analysis across all four benchmarks
+python run_combined_analysis.py 
+    --checkpoint checkpoints/best.pt
+    --output-dir ./analysis_results
+```
+
+Outputs a sensitivity table, an error-category summary, a CSV of failure cases for manual review, and a JSON with complete results under `--output-dir` (default: `./analysis_results/`).
+
+### Robustness to Noisy Examples
+
+[evaluation.py](evaluation.py) includes commented-out noisy few-shot examples (wrong function names, invalid actions, malformed SQL) for each benchmark. Uncomment the `noisy examples` blocks in the relevant benchmark class to measure how the model degrades when the in-context demonstrations are incorrect.
+Then run the eval again with
+
+```bash
+python run_experiments.py --model-size large --eval-only --checkpoint checkpoints/best.pt --strict-eval
+```
+
 ## 📦 Data Sources
 
 ### Evaluation Benchmarks
@@ -117,6 +139,8 @@ meta_tool/
 ├── run_experiments.py      # Full experimental pipeline
 ├── run_baselines.py        # Baseline evaluation scripts
 ├── run_local_baselines.py  # Local model baselines
+├── run_combined_analysis.py # Few-shot sensitivity + error categorization
+├── analysis_results/       # Output of run_combined_analysis.py
 ├── requirements.txt        # Dependencies
 └── README.md               # This file
 ```

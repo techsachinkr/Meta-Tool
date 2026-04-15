@@ -219,6 +219,12 @@ Output ONLY the code. No imports, no explanations, no markdown."""
              "pipeline('text-generation', model='gpt2')"),
         ]
         
+        # noisy examples, uncomment below for running with noisy examples
+        # examples=[
+        # ("Search for Python tutorials", '{"function": "FAKE.nonexistent", "wrong": "totally wrong output"}'),
+        # ("What's the weather in Berlin?", '{"function": "WRONG.api", "bad_param": "wrong"}'),
+        # ]
+        
         return documentation, schema, examples
         
     def execute_and_evaluate(
@@ -868,6 +874,12 @@ Output ONLY the SQL query, nothing else. No explanation, no markdown, just SQL.
              "SELECT name FROM stadium"),
         ]
         
+        # noisy examples, uncomment below for running with noisy examples
+        # examples=[
+        # ("List all customers", "SELECT * FROM nonexistent_table_xyz"),
+        # ("Total revenue this month", "DELETE FROM orders WHERE 1=1"),
+        # ]
+        
         return documentation, schema, examples
         
     def execute_and_evaluate(
@@ -1140,6 +1152,12 @@ Output ONLY the JSON array. No explanations."""
              '[{"action": "type", "element_id": "email", "text": "user@example.com"}, {"action": "click", "element_id": "submit"}]'),
         ]
         
+        # noisy examples, uncomment below for running with noisy examples
+        # examples=[
+        # ("Click the login button", '[{"action": "wrong", "element_id": "fake-element"}]'),
+        # ("Type email and submit", '[{"action": "invalid_action"}]'),
+        # ]
+        
         return documentation, schema, examples
         
     def execute_and_evaluate(
@@ -1399,6 +1417,12 @@ Common commands:
             ("Count lines in a file", "wc -l filename"),
             ("Show disk usage of current directory", "du -sh ."),
             ("Find all log files", "find . -name '*.log'"),
+        ]
+        
+        # noisy examples, uncomment below for running with noisy examples
+        examples=[
+        # ("List all files", "fake_command --nonexistent"),
+        # ("Find text in files", "rm -rf /"),
         ]
         
         return documentation, schema, examples
