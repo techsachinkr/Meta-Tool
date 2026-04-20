@@ -5,45 +5,45 @@
       "num_tasks": 50,
       "num_success": 7,
       "success_rate": 0.14,
-      "avg_latency_ms": 1335.1030158996582,
+      "avg_latency_ms": 2389.478783607483,
       "avg_steps": 1.0,
-      "adaptation_time_s": 7.152557373046875e-07
+      "adaptation_time_s": 4.76837158203125e-07
     },
     "spider2": {
       "benchmark": "spider2",
       "num_tasks": 50,
-      "num_success": 12,
-      "success_rate": 0.24,
-      "avg_latency_ms": 1079.8858785629272,
+      "num_success": 28,
+      "success_rate": 0.56,
+      "avg_latency_ms": 1176.0391235351562,
       "avg_steps": 1.0,
-      "adaptation_time_s": 7.152557373046875e-07
+      "adaptation_time_s": 4.76837158203125e-07
     },
     "webarena": {
       "benchmark": "webarena",
       "num_tasks": 50,
-      "num_success": 12,
-      "success_rate": 0.24,
-      "avg_latency_ms": 1878.4940767288208,
+      "num_success": 13,
+      "success_rate": 0.26,
+      "avg_latency_ms": 1632.589955329895,
       "avg_steps": 1.0,
       "adaptation_time_s": 4.76837158203125e-07
     },
     "intercode": {
       "benchmark": "intercode",
       "num_tasks": 50,
-      "num_success": 24,
-      "success_rate": 0.48,
-      "avg_latency_ms": 569.4432497024536,
+      "num_success": 26,
+      "success_rate": 0.52,
+      "avg_latency_ms": 640.1598882675171,
       "avg_steps": 1.0,
       "adaptation_time_s": 4.76837158203125e-07
     }
   },
   "summary": {
-    "avg_success_rate": 0.275,
-    "avg_latency_ms": 1215.731555223465,
-    "avg_adaptation_time_s": 5.960464477539062e-07,
+    "avg_success_rate": 0.37,
+    "avg_latency_ms": 1459.5669376850128,
+    "avg_adaptation_time_s": 4.76837158203125e-07,
     "training_time_s": 0
   },
-  "timestamp": "2026-01-06T03:55:36.934873",
+  "timestamp": "2026-04-20T05:11:34.919900",
   "config": {
     "model": "Meta-Tool",
     "framework": "Hypernetwork + LoRA + Value-Guided Beam Search"

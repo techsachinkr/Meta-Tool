@@ -1,22 +1,22 @@
 {
   "model": "meta-llama/Llama-3.2-3B-Instruct",
-  "timestamp": "2026-01-01T01:12:24.104904",
+  "timestamp": "2026-04-20T03:00:19.156828",
   "strict_eval": true,
   "results": [
     {
       "model": "meta-llama/Llama-3.2-3B-Instruct",
       "benchmark": "gorilla",
       "method": "few-shot",
-      "success_rate": 4.0,
-      "avg_latency_ms": 3474.3785858154297,
+      "success_rate": 34.0,
+      "avg_latency_ms": 2390.7655096054077,
       "num_tasks": 50
     },
     {
       "model": "meta-llama/Llama-3.2-3B-Instruct",
       "benchmark": "spider2",
       "method": "few-shot",
-      "success_rate": 57.99999999999999,
-      "avg_latency_ms": 996.3540363311768,
+      "success_rate": 62.0,
+      "avg_latency_ms": 1199.7223472595215,
       "num_tasks": 50
     },
     {
@@ -24,15 +24,15 @@
       "benchmark": "webarena",
       "method": "few-shot",
       "success_rate": 28.000000000000004,
-      "avg_latency_ms": 1976.7343425750732,
+      "avg_latency_ms": 2113.557529449463,
       "num_tasks": 50
     },
     {
       "model": "meta-llama/Llama-3.2-3B-Instruct",
       "benchmark": "intercode",
       "method": "few-shot",
-      "success_rate": 48.0,
-      "avg_latency_ms": 544.7385120391846,
+      "success_rate": 44.0,
+      "avg_latency_ms": 780.9551811218262,
       "num_tasks": 50
     }
   ]

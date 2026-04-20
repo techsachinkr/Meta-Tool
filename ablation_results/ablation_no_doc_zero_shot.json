@@ -5,45 +5,45 @@
       "num_tasks": 50,
       "num_success": 0,
       "success_rate": 0.0,
-      "avg_latency_ms": 2226.2326860427856,
+      "avg_latency_ms": 4077.221369743347,
       "avg_steps": 1.0,
-      "adaptation_time_s": 9.5367431640625e-07
+      "adaptation_time_s": 0.701235294342041
     },
     "spider2": {
       "benchmark": "spider2",
       "num_tasks": 50,
       "num_success": 2,
       "success_rate": 0.04,
-      "avg_latency_ms": 1808.1180381774902,
+      "avg_latency_ms": 2815.7044219970703,
       "avg_steps": 1.0,
-      "adaptation_time_s": 9.5367431640625e-07
+      "adaptation_time_s": 0.20053339004516602
     },
     "webarena": {
       "benchmark": "webarena",
       "num_tasks": 50,
       "num_success": 0,
       "success_rate": 0.0,
-      "avg_latency_ms": 1261.8930339813232,
+      "avg_latency_ms": 1957.736520767212,
       "avg_steps": 1.0,
-      "adaptation_time_s": 2.384185791015625e-07
+      "adaptation_time_s": 0.20759081840515137
     },
     "intercode": {
       "benchmark": "intercode",
       "num_tasks": 50,
       "num_success": 5,
       "success_rate": 0.1,
-      "avg_latency_ms": 1971.7797565460205,
+      "avg_latency_ms": 3065.9757232666016,
       "avg_steps": 1.0,
-      "adaptation_time_s": 2.384185791015625e-07
+      "adaptation_time_s": 0.20047879219055176
     }
   },
   "summary": {
     "avg_success_rate": 0.035,
-    "avg_latency_ms": 1817.005878686905,
-    "avg_adaptation_time_s": 5.960464477539062e-07,
+    "avg_latency_ms": 2979.1595089435577,
+    "avg_adaptation_time_s": 0.32745957374572754,
     "training_time_s": 0
   },
-  "timestamp": "2026-01-06T04:24:22.655734",
+  "timestamp": "2026-04-20T02:09:49.559322",
   "config": {
     "model": "Meta-Tool",
     "framework": "Hypernetwork + LoRA + Value-Guided Beam Search"

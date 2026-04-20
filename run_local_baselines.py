@@ -130,33 +130,33 @@ class LocalModelEvaluator:
         # Build examples text
         examples_text = ""
         if examples:
-            examples_text = "\n\nExamples:\n" + "\n".join([
-                f"Query: {q}\nOutput: {a}" for q, a in examples[:3]
+            examples_text = "\n\nExamples:\n" + "\n\n".join([
+                f"Query: {q}\nOutput: {a}" for q, a in examples[:5]
             ])
         
-        system_with_examples = system + examples_text
+        system_with_examples = examples_text.strip()  # No documentation, just examples
         
         if prompt_format == "llama3":
             return (
                 f"<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\n"
                 f"{system_with_examples}"
                 f"<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n"
-                f"{user}\n\nOutput ONLY the exact answer, nothing else."
+                f"{user}\n\nRespond with ONLY the output, exactly like the examples above. No explanation."
                 f"<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n"
             )
         elif prompt_format == "qwen":
             return (
                 f"<|im_start|>system\n{system_with_examples}<|im_end|>\n"
-                f"<|im_start|>user\n{user}\n\nOutput ONLY the exact answer, nothing else.<|im_end|>\n"
+                f"<|im_start|>user\n{user}\n\nRespond with ONLY the output, exactly like the examples above. No explanation.<|im_end|>\n"
                 f"<|im_start|>assistant\n"
             )
         elif prompt_format == "mistral":
-            return f"[INST] {system_with_examples}\n\n{user}\n\nOutput ONLY the exact answer, nothing else. [/INST]"
+            return f"[INST] {system_with_examples}\n\n{user}\n\nRespond with ONLY the output, exactly like the examples above. No explanation. [/INST]"
         elif prompt_format == "agentlm":
             # AgentLM format - designed for agent tasks
             return (
                 f"### System:\n{system_with_examples}\n\n"
-                f"### User:\n{user}\n\nOutput ONLY the exact answer, nothing else.\n\n"
+                f"### User:\n{user}\n\nRespond with ONLY the output, exactly like the examples above. No explanation.\n\n"
                 f"### Assistant:\n"
             )
         else:
@@ -167,18 +167,39 @@ class LocalModelEvaluator:
         """Generate response from model."""
         if max_new_tokens is None:
             max_new_tokens = self.config["max_new_tokens"]
-        
+
         inputs = self.tokenizer(prompt, return_tensors="pt").to(self.model.device)
-        
+
+        # Build stopping criteria matching AdaptedModel.generate()
+        from transformers import StoppingCriteria, StoppingCriteriaList
+
+        class StopOnTokens(StoppingCriteria):
+            def __init__(self, stop_token_ids):
+                self.stop_token_ids = stop_token_ids
+
+            def __call__(self, input_ids, scores, **kwargs):
+                for stop_id in self.stop_token_ids:
+                    if input_ids[0][-1] == stop_id:
+                        return True
+                return False
+
+        stop_tokens = []
+        for token in ['\n\n', ';', '<|eot_id|>', '</s>', '<|end|>']:
+            ids = self.tokenizer.encode(token, add_special_tokens=False)
+            stop_tokens.extend(ids)
+
+        stopping_criteria = StoppingCriteriaList([StopOnTokens(stop_tokens)]) if stop_tokens else None
+
         with torch.no_grad():
             outputs = self.model.generate(
                 **inputs,
                 max_new_tokens=max_new_tokens,
                 do_sample=False,
                 pad_token_id=self.tokenizer.pad_token_id,
-                eos_token_id=self.tokenizer.eos_token_id
+                eos_token_id=self.tokenizer.eos_token_id,
+                stopping_criteria=stopping_criteria
             )
-        
+
         # Decode only new tokens
         response = self.tokenizer.decode(
             outputs[0][inputs.input_ids.shape[1]:],

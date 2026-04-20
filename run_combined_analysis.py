@@ -177,53 +177,64 @@ def run_evaluation(
     tasks = evaluator.load_tasks()[:num_tasks]
     documentation, schema, all_examples = evaluator.get_tool_spec()
     
-    # Build prompt with n examples
+    # Build prompt with n examples (matching MetaToolEvaluator format)
     examples = all_examples[:n_examples]
-    
-    if n_examples > 0:
-        examples_text = "\n\n".join([f"Query: {q}\nOutput: {a}" for q, a in examples])
-        prompt_prefix = (
-            "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\n"
-            + documentation.strip() + "\n\n"
-            + "Examples:\n" + examples_text
-            + "<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n"
-        )
-    else:
-        prompt_prefix = (
-            "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\n"
-            + documentation.strip()
-            + "<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n"
-        )
-    
-    prompt_suffix = (
-        "\n\nRespond with ONLY the output. No explanation."
-        "<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n"
+
+    examples_text = "\n".join([
+        f"Query: {q}\nOutput: {a}" for q, a in examples
+    ]) if examples else ""
+
+    prompt_prefix = (
+        "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\n"
+        + documentation.strip() + "\n\n"
+        + "Examples:\n" + examples_text
+        + "<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n"
     )
     
+    prompt_suffix = (
+        "\n\nRespond with ONLY the output, exactly like the examples above. No explanation."
+        "<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n"
+    )
+
     successes = 0
     failures = []
-    
-    for task in tqdm(tasks, desc=f"{benchmark} {n_examples}-shot", leave=False):
+
+    for i, task in enumerate(tqdm(tasks, desc=f"{benchmark} {n_examples}-shot", leave=False)):
         prompt = prompt_prefix + task['query'] + prompt_suffix
-        
+
         prediction = adapted_model.generate(
             prompt,
             max_new_tokens=config.inference.max_new_tokens,
             do_sample=False,
             temperature=1.0
         )
-        
-        try:
-            success, message = evaluator.execute_and_evaluate(task, prediction, strict=True)
-        except TypeError:
-            success, message = evaluator.execute_and_evaluate(task, prediction)
-        
+
+        success, message = evaluator.execute_and_evaluate(task, prediction, strict=True)
+
+        # Extract expected using same logic as each evaluator
+        if benchmark == "gorilla":
+            expected = task.get("expected", task.get("expected_output", task.get("answer", "")))
+        elif benchmark == "spider2":
+            expected = task.get("expected_sql", task.get("expected", ""))
+        elif benchmark == "webarena":
+            expected = task.get("expected_actions", [])
+        elif benchmark == "intercode":
+            expected = task.get("expected_command", task.get("expected", ""))
+        else:
+            expected = task.get("expected", "")
+
+        # # Log every task result
+        # status = "OK" if success else "FAIL"
+        # print(f"\n  [{status}] Task {i}: {task['query'][:80]}")
+        # print(f"    Pred: {repr(prediction[:200])}")
+        # print(f"    Exp:  {repr(str(expected)[:200])}")
+        # print(f"    Msg:  {message}")
+
         if success:
             successes += 1
         else:
-            expected = task.get("expected", task.get("expected_sql", 
-                       task.get("expected_command", str(task.get("expected_actions", "")))))
-            
+            category = auto_categorize_failure(prediction, str(expected), message or "", benchmark)
+            print(f"    Cat:  {category}")
             failures.append(FailureCase(
                 task_id=task.get("id", "unknown"),
                 benchmark=benchmark,
@@ -232,7 +243,7 @@ def run_evaluation(
                 expected=str(expected)[:300],
                 prediction=prediction[:300],
                 error_message=message or "",
-                auto_category=auto_categorize_failure(prediction, str(expected), message or "", benchmark)
+                auto_category=category
             ))
     
     result = {

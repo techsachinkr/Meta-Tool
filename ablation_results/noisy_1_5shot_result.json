@@ -3,47 +3,47 @@
     "gorilla": {
       "benchmark": "gorilla",
       "num_tasks": 50,
-      "num_success": 16,
-      "success_rate": 0.32,
-      "avg_latency_ms": 1697.472186088562,
+      "num_success": 13,
+      "success_rate": 0.26,
+      "avg_latency_ms": 2271.05770111084,
       "avg_steps": 1.0,
       "adaptation_time_s": 7.152557373046875e-07
     },
     "spider2": {
       "benchmark": "spider2",
       "num_tasks": 50,
-      "num_success": 31,
-      "success_rate": 0.62,
-      "avg_latency_ms": 1044.1372156143188,
+      "num_success": 30,
+      "success_rate": 0.6,
+      "avg_latency_ms": 1267.8048658370972,
       "avg_steps": 1.0,
-      "adaptation_time_s": 4.76837158203125e-07
+      "adaptation_time_s": 2.384185791015625e-07
     },
     "webarena": {
       "benchmark": "webarena",
       "num_tasks": 50,
-      "num_success": 12,
-      "success_rate": 0.24,
-      "avg_latency_ms": 1608.3238124847412,
+      "num_success": 14,
+      "success_rate": 0.28,
+      "avg_latency_ms": 1888.2985401153564,
       "avg_steps": 1.0,
       "adaptation_time_s": 4.76837158203125e-07
     },
     "intercode": {
       "benchmark": "intercode",
       "num_tasks": 50,
-      "num_success": 22,
-      "success_rate": 0.44,
-      "avg_latency_ms": 671.4150142669678,
+      "num_success": 26,
+      "success_rate": 0.52,
+      "avg_latency_ms": 655.37184715271,
       "avg_steps": 1.0,
-      "adaptation_time_s": 4.76837158203125e-07
+      "adaptation_time_s": 7.152557373046875e-07
     }
   },
   "summary": {
-    "avg_success_rate": 0.40499999999999997,
-    "avg_latency_ms": 1255.3370571136475,
+    "avg_success_rate": 0.41500000000000004,
+    "avg_latency_ms": 1520.6332385540009,
     "avg_adaptation_time_s": 5.364418029785156e-07,
     "training_time_s": 0
   },
-  "timestamp": "2026-01-06T04:07:17.884253",
+  "timestamp": "2026-04-20T04:59:59.752905",
   "config": {
     "model": "Meta-Tool",
     "framework": "Hypernetwork + LoRA + Value-Guided Beam Search"

@@ -2,48 +2,48 @@
   "sensitivity_results": {
     "gorilla": {
       "0": {
-        "success_rate": 0.0,
-        "num_success": 0,
+        "success_rate": 0.02,
+        "num_success": 1,
         "num_tasks": 50,
-        "num_failures": 50
+        "num_failures": 49
       },
       "1": {
-        "success_rate": 0.04,
-        "num_success": 2,
+        "success_rate": 0.24,
+        "num_success": 12,
         "num_tasks": 50,
-        "num_failures": 48
+        "num_failures": 38
       },
       "2": {
-        "success_rate": 0.06,
-        "num_success": 3,
+        "success_rate": 0.36,
+        "num_success": 18,
         "num_tasks": 50,
-        "num_failures": 47
+        "num_failures": 32
       },
       "3": {
-        "success_rate": 0.04,
-        "num_success": 2,
+        "success_rate": 0.32,
+        "num_success": 16,
         "num_tasks": 50,
-        "num_failures": 48
+        "num_failures": 34
       },
       "4": {
-        "success_rate": 0.06,
-        "num_success": 3,
+        "success_rate": 0.36,
+        "num_success": 18,
         "num_tasks": 50,
-        "num_failures": 47
+        "num_failures": 32
       },
       "5": {
-        "success_rate": 0.06,
-        "num_success": 3,
+        "success_rate": 0.38,
+        "num_success": 19,
         "num_tasks": 50,
-        "num_failures": 47
+        "num_failures": 31
       }
     },
     "spider2": {
       "0": {
-        "success_rate": 0.22,
-        "num_success": 11,
+        "success_rate": 0.26,
+        "num_success": 13,
         "num_tasks": 50,
-        "num_failures": 39
+        "num_failures": 37
       },
       "1": {
         "success_rate": 0.46,
@@ -52,10 +52,10 @@
         "num_failures": 27
       },
       "2": {
-        "success_rate": 0.46,
-        "num_success": 23,
+        "success_rate": 0.44,
+        "num_success": 22,
         "num_tasks": 50,
-        "num_failures": 27
+        "num_failures": 28
       },
       "3": {
         "success_rate": 0.58,
@@ -78,72 +78,72 @@
     },
     "webarena": {
       "0": {
-        "success_rate": 0.18,
-        "num_success": 9,
+        "success_rate": 0.3,
+        "num_success": 15,
         "num_tasks": 50,
-        "num_failures": 41
+        "num_failures": 35
       },
       "1": {
-        "success_rate": 0.2,
-        "num_success": 10,
+        "success_rate": 0.24,
+        "num_success": 12,
         "num_tasks": 50,
-        "num_failures": 40
+        "num_failures": 38
       },
       "2": {
-        "success_rate": 0.3,
-        "num_success": 15,
+        "success_rate": 0.32,
+        "num_success": 16,
         "num_tasks": 50,
-        "num_failures": 35
+        "num_failures": 34
       },
       "3": {
-        "success_rate": 0.3,
-        "num_success": 15,
+        "success_rate": 0.34,
+        "num_success": 17,
         "num_tasks": 50,
-        "num_failures": 35
+        "num_failures": 33
       },
       "4": {
-        "success_rate": 0.4,
-        "num_success": 20,
-        "num_tasks": 50,
-        "num_failures": 30
-      },
-      "5": {
         "success_rate": 0.38,
         "num_success": 19,
         "num_tasks": 50,
         "num_failures": 31
+      },
+      "5": {
+        "success_rate": 0.32,
+        "num_success": 16,
+        "num_tasks": 50,
+        "num_failures": 34
       }
     },
     "intercode": {
       "0": {
-        "success_rate": 0.56,
-        "num_success": 28,
+        "success_rate": 0.5,
+        "num_success": 25,
         "num_tasks": 50,
-        "num_failures": 22
+        "num_failures": 25
       },
       "1": {
+        "success_rate": 0.46,
+        "num_success": 23,
+        "num_tasks": 50,
+        "num_failures": 27
+      },
+      "2": {
         "success_rate": 0.52,
         "num_success": 26,
         "num_tasks": 50,
         "num_failures": 24
       },
-      "2": {
-        "success_rate": 0.56,
-        "num_success": 28,
-        "num_tasks": 50,
-        "num_failures": 22
-      },
       "3": {
-        "success_rate": 0.5,
-        "num_success": 25,
+        "success_rate": 0.48,
+        "num_success": 24,
         "num_tasks": 50,
-        "num_failures": 25
+        "num_failures": 26
       },
       "4": {
-        "success_rate": 0.5,
-        "num_success": 25,
+        "success_rate": 0.52,
+        "num_success": 26,
         "num_tasks": 50,
-        "num_failures": 25
+        "num_failures": 24
       },
       "5": {
         "success_rate": 0.54,
@@ -153,7 +153,7 @@
       }
     }
   },
-  "failures_count": 793,
+  "failures_count": 722,
   "config": {
     "benchmarks": [
       "gorilla",
@@ -171,5 +171,5 @@
     ],
     "num_tasks": 50
   },
-  "timestamp": "20260217_003600"
+  "timestamp": "20260420_043011"
 }
