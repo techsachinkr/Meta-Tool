@@ -150,6 +150,22 @@ Meta-Tool/
 └── README.md                # This file
 ```
 
+## Citation
+
+If you use this work, please cite:
+
+```bibtex
+@misc{kumar2026metatoolefficientfewshottool,
+      title={Meta-Tool: Efficient Few-Shot Tool Adaptation for Small Language Models}, 
+      author={Sachin Kumar},
+      year={2026},
+      eprint={2604.20148},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2604.20148}, 
+}
+```
+
 ## 🔧 Configuration
 
 Edit `config.py` or pass arguments to override:
