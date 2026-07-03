@@ -1,6 +1,6 @@
 # Meta-Tool: Efficient Few-Shot Tool Adaptation for Small Language Models
 
-**Accepted at ACL 2026 Findings**
+**Published in [Findings of ACL 2026](https://aclanthology.org/2026.findings-acl.492/)**
 
 This repository contains the implementation of **Meta-Tool**, a framework demonstrating that efficient tool-use in small language models is achievable through carefully designed few-shot prompting. Our 3B parameter model achieves competitive performance with GPT-5 while being **10x faster**.
 
@@ -155,14 +155,22 @@ Meta-Tool/
 If you use this work, please cite:
 
 ```bibtex
-@misc{kumar2026metatoolefficientfewshottool,
-      title={Meta-Tool: Efficient Few-Shot Tool Adaptation for Small Language Models}, 
-      author={Sachin Kumar},
-      year={2026},
-      eprint={2604.20148},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2604.20148}, 
+@inproceedings{kumar-2026-meta,
+    title = "Meta-Tool: Efficient Few-Shot Tool Adaptation for Small Language Models",
+    author = "Kumar, Sachin",
+    editor = "Liakata, Maria  and
+      Moreira, Viviane P.  and
+      Zhang, Jiajun  and
+      Jurgens, David",
+    booktitle = "Findings of the {A}ssociation for {C}omputational {L}inguistics: {ACL} 2026",
+    month = jul,
+    year = "2026",
+    address = "San Diego, California, United States",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.findings-acl.492/",
+    doi = "10.18653/v1/2026.findings-acl.492",
+    pages = "10132--10147",
+    ISBN = "979-8-89176-395-1",
 }
 ```
 
